@@ -2,5 +2,5 @@
 
 public class CompleteTaskRequest
 {
-    
+    public Guid id { get; set; }
 }
