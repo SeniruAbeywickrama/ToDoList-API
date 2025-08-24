@@ -40,6 +40,13 @@ public class TaskController : ControllerBase
         
     }
     
+    [HttpGet("test")]
+    public async Task<IActionResult> Test()
+    {
+        return Ok("Wroking");
+        
+    }
+    
     [HttpPut("complete-task")]
     public async Task<IActionResult> CompleteTask(CompleteTaskRequest request)
     {
