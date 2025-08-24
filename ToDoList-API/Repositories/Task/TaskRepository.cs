@@ -37,7 +37,7 @@ public class TaskRepository : ITaskRepository
 
     public async Task<GetTaskResponse> GetTask()
     {
-        // Only fetch the pending todo's
+        // Only fetch the pendings
         var tasks = await _context.Tasks.Where(u => u.IsDone == false).ToListAsync();
       
         if (tasks == null || tasks.Count == 0)
